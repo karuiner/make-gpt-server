@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+  </head>
+  <body>
+    <h1>Welcome to My App</h1>
+    <% if (user) { %>
+    <p>You are logged in as <%= user.username %>.</p>
+    <p><a href="/posts/new">Create a new post</a></p>
+    <p><a href="/users/<%= user._id %>">View your profile</a></p>
+    <p><a href="/auth/logout">Log out</a></p>
+    <% } else { %>
+    <p>
+      <a href="/auth/login">Log in</a> or
+      <a href="/auth/register">register</a> to create posts and view profiles.
+    </p>
+    <% } %>
+  </body>
+</html>
